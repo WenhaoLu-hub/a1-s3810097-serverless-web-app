@@ -10,9 +10,9 @@ import * as serviceWorker from './serviceWorker';
 Amplify.configure({
     Auth: {
       mandatorySignIn: true,
-      region: config.cognito.region,
-      userPoolId: config.cognito.userPoolId,
-      userPoolWebClientId: config.cognito.userPoolWebClientId
+      region: config.cognito.REGION,
+      userPoolId: config.cognito.USER_POOL_ID,
+      userPoolWebClientId: config.cognito.APP_CLIENT_ID
     }
   });
 
