@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import FormErrors from "./FormErrors";
-import Validate from "./utility/FormValidation";
-// import Product from './Product';
 import axios from "axios";
 const config = require('../config.json');
 
@@ -18,14 +16,7 @@ export default class GameAdmin extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // state = {
-  //   newgame: { 
-  //     "name": "web-test-name",
-  //     "genres": "web-test-genres",
-  //     "description": "webtest-description"
-  //   },
-  //   games: []
-  // }
+
   handleChange(event) {
     const inputValue = event.target.value;
     const stateField = event.target.name;
