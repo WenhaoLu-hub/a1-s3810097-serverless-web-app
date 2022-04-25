@@ -42,118 +42,10 @@ export default class GameAdmin extends Component {
     });
     document.getElementById(event.target.id).classList.remove("is-danger");
   }
-  // handleAddProduct = async (event) => {
-  //   event.preventDefault();
-  //   // add call to AWS API Gateway add product endpoint here
-  //   try {
-  //     const params = {
 
-  //         "name" : "web-test-name",
-  //         "genres" : "web-test-genres",
-  //         "description" : "webtest-description"   
-
-  //     };
-  //     alert(JSON.stringify(params));
-  //     await axios.post(`https://jmulu03w55.execute-api.us-east-1.amazonaws.com/dev`, params);
-  //     this.setState({ games: [...this.state.games, this.state.newgame] });
-  //     this.setState({ newgame: { "name": "", "genres": "" ,"description":""}});
-  //   }catch (err) {
-  //     console.log(`An error has occurred: ${err}`);
-  //   }
-  // }
-
-  // handleUpdateProduct = async (name, genres, description) => {
-  //   // add call to AWS API Gateway update product endpoint here
-  //   try {
-  //     const params = {
-  //       "name": name,
-  //       "genres": genres,
-  //       "description": description
-  //     };
-  //     await axios.patch(`${config.api.invokeUrl}/game/${name}`, params);
-  //     const gameToUpdate = [...this.state.names].find(game => game.name === name);
-  //     const updatedGames = [...this.state.games].filter(game => game.name !== name);
-  //     gameToUpdate.productname = name;
-  //     updatedGames.push(gameToUpdate);
-  //     this.setState({products: updatedGames});
-  //   }catch (err) {
-  //     console.log(`Error updating product: ${err}`);
-  //   }
-  // }
-
-
-  // fetchProducts = async () => {
-  //   // add call to AWS API Gateway to fetch products here
-  //   // then set them in state
-  //   try {
-  //     const res = await axios.get(`${config.api.invokeUrl}/game`);
-  //     const games = res.data;
-  //     this.setState({ games: games });
-  //   } catch (err) {
-  //     console.log(`An error has occurred: ${err}`);
-  //   }
-  // }
-
-  // onAddGameNameChange = event => this.setState({ newgame: { ...this.state.newgame, "name": event.target.value } });
-  // onAddGameGenresChange = event => this.setState({ newgame: { ...this.state.newgame, "genres": event.target.value } });
-  // onAddGameDescChange = event => this.setState({ newgame: { ...this.state.newgame, "description": event.target.value } });
-
-  // componentDidMount = () => {
-  //   this.fetchProducts();
-  // }
 
   render() {
     return (
-      // <Fragment>
-      //   <section className="section">
-      //     <div className="container">
-      //       <h1>Product Admin</h1>
-      //       <p className="subtitle is-5">Add new game using the form below:</p>
-      //       <br />
-      //       <div className="columns">
-      //         <div className="column is-one-third">
-      //           <form onSubmit={this.handleSubmit}>
-      //             <div className="field has-addons">
-      //               <div className="control">
-      //                 <input 
-      //                   className="input is-medium"
-      //                   type="text" 
-      //                   placeholder="Enter name"
-      //                   onChange={this.onAddGameNameChange}
-      //                   value={this.state.name}
-      //                 />
-      //               </div>
-      //               <div className="control">
-      //                 <input 
-      //                   className="input is-medium"
-      //                   type="text" 
-      //                   placeholder="Enter genres"
-      //                   onChange={this.onAddGameGenresChange}
-      //                   value={this.state.genres}
-      //                 />
-      //               </div>
-      //               <div className="control">
-      //                 <input 
-      //                   className="input is-medium"
-      //                   type="text" 
-      //                   placeholder="Enter description"
-      //                   onChange={this.onAddGameDescChange}
-      //                   value={this.state.description}
-      //                 />
-      //               </div>
-      //               <div className="control">
-      //                 <button type="submit" className="button is-primary is-medium">
-      //                   Add product
-      //                 </button>
-      //               </div>
-      //             </div>
-      //           </form>
-      //         </div>
-  
-      //       </div>
-      //     </div>
-      //   </section>
-      // </Fragment>
       <section className="section auth">
         <div className="container">
           <h1>New Game</h1>
@@ -214,44 +106,8 @@ export default class GameAdmin extends Component {
         </div>
       </section>
 
-      // <div>
-      //   <form onSubmit={this.handleSubmit}>
-      //     <div>
-      //     <label>Name:</label>
-      //     <input
-      //       type="text"
-      //       name="name"
-      //       onChange={this.handleChange}
-      //       value={this.state.name}
-      //     />
-      //     </div>
-      //     <div>
-      //     <label>genres:</label>
-      //     <input
-      //       type="text"
-      //       name="genres"
-      //       onChange={this.handleChange}
-      //       value={this.state.genres}
-      //     />
-      //     </div>
-      //     <div>
-      //     <label>description:</label>
-      //     <input
-      //       type="text"
-      //       name="description"
-      //       onChange={this.handleChange}
-      //       value={this.state.description}
-      //     />
-      //     </div>
-          
-      //   <div><button type="submit">Send</button></div>
-          
 
-          
 
-          
-      //    </form>
-      //  </div>
     );
     
   }
