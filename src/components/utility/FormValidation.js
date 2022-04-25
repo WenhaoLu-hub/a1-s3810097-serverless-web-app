@@ -34,14 +34,7 @@ function validateForm(event, state) {
     document.getElementById("password").classList.add("is-danger");
     return { blankfield: true };
   }
-  if (state.hasOwnProperty("oldpassword") && state.oldpassword === "") {
-    document.getElementById("oldpassword").classList.add("is-danger");
-    return { blankfield: true };
-  }
-  if (state.hasOwnProperty("newpassword") && state.newpassword === "") {
-    document.getElementById("newpassword").classList.add("is-danger");
-    return { blankfield: true };
-  }
+
   if (state.hasOwnProperty("confirmpassword") && state.confirmpassword === "") {
     document.getElementById("confirmpassword").classList.add("is-danger");
     return { blankfield: true };

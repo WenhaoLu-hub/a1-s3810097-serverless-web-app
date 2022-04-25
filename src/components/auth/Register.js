@@ -139,11 +139,7 @@ class Register extends Component {
                 </span>
               </p>
             </div>
-            <div className="field">
-              <p className="control">
-                <a href="/forgotpassword">Forgot password?</a>
-              </p>
-            </div>
+
             <div className="field">
               <p className="control">
                 <button className="button is-success">
